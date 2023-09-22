@@ -45,4 +45,9 @@ button {
 
 .nav-items-list {
     display: flex;
+    list-style-type: none;
+}
+
+li {
+    margin-right: 1rem;
 }
