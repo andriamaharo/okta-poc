@@ -16,7 +16,6 @@ nav {
     margin: 1.5rem auto;
 }
 ul {
-    display: flex;
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -51,4 +50,8 @@ button {
 .container {
     max-width: 62rem;
     margin: 1.5rem auto;
+}
+
+.nav-items-list {
+    display: flex;
 }

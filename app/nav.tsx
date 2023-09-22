@@ -14,7 +14,7 @@ export default function Nav() {
     <>
       <div className={`header ${pageName}`}>
         <nav>
-          <ul>
+          <ul className='nav-items-list'>
             <li>
               <Link href="/" legacyBehavior>
                 <a className="active">App Router</a>
@@ -30,7 +30,7 @@ export default function Nav() {
       </div>
       <div className={`header ${pageName || 'home'} secondary`}>
         <nav>
-          <ul>
+         <ul className='nav-items-list'>
             <li>
               <Link href="/" legacyBehavior>
                 <a>Home</a>
