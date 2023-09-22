@@ -3,6 +3,4 @@ const nextConfig = {
   productionBrowserSourceMaps: true
 };
 
-module.exports = {
-  staticDirs: [{ from: '../public/assets', to: '/assets' }],
-};
+module.exports = nextConfig;
