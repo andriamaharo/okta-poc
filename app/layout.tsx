@@ -1,4 +1,5 @@
 import './globals.css';
+import '../public/assets/css/font.css'
 import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Nav from '@/app/nav';
 
@@ -18,7 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/lato-regular.ttf" />
         <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/lato-bold.ttf" />
         <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/lato-italic.ttf" />
-        <link rel="stylesheet" href="/assets/fonts/font.css" />
 
         <body>
           <header>
