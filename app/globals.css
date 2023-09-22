@@ -15,7 +15,14 @@ nav {
     max-width: 62rem;
     margin: 1.5rem auto;
 }
-
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+li {
+    margin-right: 1rem;
+}
 .header.secondary li:nth-last-child(3) {
     margin-right: auto;
 }
@@ -30,7 +37,9 @@ nav {
 .header.profile-middleware a[href$='/profile-middleware'],
 .header.profile-api a[href$='/profile-api'],
 .header.edge-profile-api a[href$='/edge-profile-api'],
-
+a.active {
+    color: #888;
+}
 button {
     font-size: 1rem;
     color: #fff;
