@@ -11,6 +11,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <UserProvider>
+        <link rel="preload" as="font" type="font/otf" href="/assets/fonts/harmonia-sans-std-regular.otf" />
+        <link rel="preload" as="font" type="font/otf" href="/assets/fonts/harmonia-sans-std-semi-bold.otf" />
+        <link rel="preload" as="font" type="font/otf" href="/assets/fonts/harmonia-sans-std-bold.otf" />
+        <link rel="preload" as="font" type="font/otf" href="/assets/fonts/pampers-script.otf" />
+        <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/lato-regular.ttf" />
+        <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/lato-bold.ttf" />
+        <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/lato-italic.ttf" />
+        <link rel="stylesheet" href="/assets/fonts/font.css" />
+
         <body>
           <header>
             <Nav />
