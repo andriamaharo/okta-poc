@@ -7,7 +7,7 @@
         <meta name="description" content="Register & log in to Pampers" />
         <link rel="preload" as="font"  type="font/otf" href="https://comforting-syrniki-4f2cea.netlify.app/assets/fonts/harmonia-sans-std-bold.otf" />
         <link rel="preload" as="font" type="font/otf" href="https://comforting-syrniki-4f2cea.netlify.app/assets/fonts/harmonia-sans-std-regular.otf" />
-        <link rel="stylesheet" href="https://comforting-syrniki-4f2cea.netlify.app/_next/static/css/f0860bc04f618199.css" />
+        <link rel="stylesheet" href="https://comforting-syrniki-4f2cea.netlify.app/_next/static/css/50c2e8ad75ae0cfb.css" />
         <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KX4XFDH"></script>
         <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BNWM702CE7&amp;l=dataLayer&amp;cx=c"></script>
         <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
@@ -15,7 +15,12 @@
     </head>
     <body>
         <div id="__next" data-reactroot="">
-            <div>
+            <div class="_widget-auto-layout">
+                <div class="header-backbutton">
+                    <div onclick="returnBack()" role="button" title="Back" class="BackButton__ButtonWrapper-sc-1v6odf5-0 csernH btn title font-primary event_button_click" data-action-detail="ENG_REG-PAGE_OTHER_HYPERLINK_ALL_back-cta" data-testid="back-button-styledwrapper" tabindex="0"><svg role="img" id="arrow-teal-left" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path fill="var(--teal)" fill-rule="evenodd" d="M1.358 4.456c-.036-.024-.079-.071-.078-.163 0-.033.006-.068.017-.105.054-.196.231-.435.326-.495C3.773 2.327 4.696 1.713 6.65.07c.071-.06.124-.081.167-.064.02.008.048.028.056.08.026.159-.04.687-.169.796C5.141 2.198 4.612 2.55 2.85 3.732l-.432.301.506.343.221.157c1.231.847 2.45 1.734 3.625 2.637.037.029.08.089.065.209-.028.225-.231.533-.397.605-.072.03-.12.011-.148-.01-1.598-1.228-3.258-2.412-4.932-3.518"></path></svg>
+                         <span>Back</span>
+                    </div>
+                </div>
                 {%- auth0:widget -%}
                 <footer class="FooterRedesign__StyledWrapper-sc-b5s69n-0 chsQdr footer-component accessible-variant" role="contentinfo" data-cy="footer-component">
                     <div class="FooterSocialNav__StyledWrapper-sc-1klxn8t-0 hEyXKr footer-social-nav" data-cy="footerSocialNav">
@@ -217,5 +222,10 @@
             </div>
         </div>
         <script type="text/javascript" id="" src="//cdn.pricespider.com/1/lib/ps-widget.js"></script>
+        <script>
+            function returnBack() {
+                window.location.href = "https://comforting-syrniki-4f2cea.netlify.app";
+            }
+        </script>
     </body>
 </html>
