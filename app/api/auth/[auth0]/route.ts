@@ -5,6 +5,7 @@ export const GET = handleAuth({
     authorizationParams: { screen_hint: 'signup' } ,
     returnTo: 'https://www.pampers.com/en-us/registration/thank-you-completed'
   }),
+  login : handleLogin({}),
   onError(req: Request, error: Error) {
     console.error(error);
   }
