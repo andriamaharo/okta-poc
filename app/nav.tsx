@@ -82,8 +82,8 @@ export default function Nav() {
                   </a>
                 </li>
                 <li>
-                  <a href="/api/edge-auth/login" data-testid="login-edge">
-                    Login (Edge)
+                  <a href="/api/auth/signup" data-testid="signup">
+                    Register
                   </a>
                 </li>
               </>
