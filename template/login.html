@@ -11,6 +11,144 @@
         <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KX4XFDH"></script>
         <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BNWM702CE7&amp;l=dataLayer&amp;cx=c"></script>
         <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            /* header */
+            #form-widget-okta header{
+                padding: 0;
+            }
+            #prompt-logo-center{
+                content: url(https://images.ctfassets.net/olgn490fyv7t/6MxWuBtY6hMG19XazADHxe/39338f747b794ad3ea3605b4017dc292/header.svg);
+                width: 100%;
+                max-height: unset;
+                height: auto;
+            }
+            /*  social */
+            #form-widget-okta button[type=submit]{
+                border-radius: 100px;
+                background: #FF5D52;
+            }
+            #form-widget-okta button[data-provider^=facebook],
+            #form-widget-okta button[data-provider^=apple],
+            #form-widget-okta button[data-provider^=google]{
+                color: #fff;
+                justify-content: center;
+                padding: 4px;
+            }
+            #form-widget-okta button[data-provider^=apple]{
+                background-color: #000000;
+                border-color: #000000;
+            }
+            #form-widget-okta button[data-provider^=facebook]{
+                background-color: #3574DC;
+                border-color: #3574DC;
+            }
+            #form-widget-okta button[data-provider^=google]{
+                background-color: #5185EC;
+                border-color: #5185EC;
+            }
+            #form-widget-okta span[data-provider^=facebook],
+            #form-widget-okta span[data-provider^=google],
+            #form-widget-okta span[data-provider^=apple]{
+                position: relative;
+                top: unset;
+                transform: unset;
+                left: unset;
+                margin-right: 8px;
+            }#form-widget-okta span[data-provider^=facebook]{
+                background-image: url('https://images.ctfassets.net/olgn490fyv7t/40RPTLPuImXgGouwdktgqq/cb16271fa6d81fe0f001e3a8cd5694d2/logo-facebook.png');
+            }
+            #form-widget-okta span[data-provider^=google]{
+                background-image: url('https://images.ctfassets.net/olgn490fyv7t/5ydIQadWr3NNRKrwcsaoJD/c8705ed6eb637be07e736a727978b4a9/Logo-google.png');
+            }
+            #form-widget-okta span[data-provider^=apple]{
+                background-image: url('https://images.ctfassets.net/olgn490fyv7t/4gBYBcrWscqXXLsjQ0JYvL/0b5f5ff5eb706a947cb4c3a32fc33308/logo-apple.png');
+            }
+            /* input */
+            #form-widget-okta .input-wrapper{
+                margin-bottom: 20px;
+            }
+            #form-widget-okta .text,
+            #form-widget-okta .password{
+                border-radius: unset;
+                border: unset;
+                border-bottom: 1px solid #1C5972;
+            }
+            #form-widget-okta .text [data-dynamic-label-for^=email],
+            #form-widget-okta .text [data-dynamic-label-for^=username],
+            #form-widget-okta .password [data-dynamic-label-for^=password]{
+                left:0;
+                padding: 0;
+            }
+            #form-widget-okta #email:focus~div[data-dynamic-label-for^=email],
+            #form-widget-okta .text [data-dynamic-label-for^=username],
+            #form-widget-okta #password:focus~div[data-dynamic-label-for^=password]{
+                padding: 1px 6px;
+            }
+            #form-widget-okta .text [data-dynamic-label-for^=email],
+            #form-widget-okta .password [data-dynamic-label-for^=password],
+            #form-widget-okta .text [data-dynamic-label-for^=username],
+            #form-widget-okta #email,
+            #form-widget-okta #password,
+            #form-widget-okta .text label,
+            #form-widget-okta .password label{
+                color: #1C5972;
+                font-family: Harmonia Sans Pro;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 120% */
+                letter-spacing: -0.2px;
+            }
+            #form-widget-okta #email,
+            #form-widget-okta #username,
+            #form-widget-okta #password{
+                border: unset;
+            }
+            #form-widget-okta #email,
+            #form-widget-okta #username,
+            #form-widget-okta .password{
+                box-shadow: unset;
+            }
+            
+            #form-widget-okta .ulp-alternate-action + div{
+                margin-bottom: 32px;
+                padding-top: 32px;
+            }
+            #form-widget-okta .ulp-captcha-container{
+                margin-top: 50px;
+            }
+            
+            #form-widget-okta .ulp-alternate-action p a{
+                color: #00A3A3;
+                text-align: center;
+                font-family: Harmonia Sans Pro;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 19px; /* 100% */
+                text-decoration-line: underline;
+                display: inline-block;
+                margin: 12px 0 0;
+            }
+            #form-widget-okta .ulp-alternate-action p{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #1C5972;
+                text-align: center;
+
+                /* Body/B1 - Regular (17px) */
+                font-family: Harmonia Sans Pro;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 141.176% */
+            }
+            
+
+        </style>
         {%- auth0:head -%}
     </head>
     <body>
@@ -228,6 +366,31 @@
             function returnBack() {
                 window.location.href = "https://comforting-syrniki-4f2cea.netlify.app";
             }
+        </script>
+        <script>
+             function injectEventData() {
+                $("#form-widget-okta button[type=submit]").addClass("event_button_click");
+                if(window.location.pathname.endsWith("signup")){
+                    $("#form-widget-okta button[type=submit]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_register");
+                    $("#form-widget-okta button[data-provider^=facebook]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_vortex-register-facebook-registration");
+                    $("#form-widget-okta button[data-provider^=google]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_vortex-register-google-registration");
+                    $("#form-widget-okta button[data-provider^=apple]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_vortex-register-apple-registration");
+                }else{
+                    $("#form-widget-okta button[type=submit]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_login");
+                    $("#form-widget-okta button[data-provider^=facebook]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_vortex-login-facebook-registration");
+                    $("#form-widget-okta button[data-provider^=google]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_vortex-login-google-registration");
+                    $("#form-widget-okta button[data-provider^=apple]").
+                    attr("data-action-detail","REG_REG-PAGE_OTHER_OTHER_ALL_vortex-login-apple-registration");
+                }
+             }
+             injectEventData();
         </script>
     </body>
 </html>
