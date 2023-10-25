@@ -86,6 +86,11 @@ export default function Nav() {
                     Register
                   </a>
                 </li>
+                <li>
+                  <a href="/api/auth/signup-tools" data-testid="signup-tools">
+                    Register from tools
+                  </a>
+                </li>
               </>
             )}
           </ul>
